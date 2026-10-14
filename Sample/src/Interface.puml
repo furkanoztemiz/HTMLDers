@@ -1,0 +1,16 @@
+@startuml
+
+interface KütüphaneServis{
+
+void kitapDüzenle()
+void kitapAl()
+void kitapTeslimEt()
+void kitapEkle()
+void kitapKontrol()
+void ogrenciEkle()
+void ogrenciKontrol()
+
+}
+
+
+@enduml

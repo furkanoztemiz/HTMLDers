@@ -1,0 +1,23 @@
+@startuml
+
+interface Item{
+void NumberGetir();
+void stokTakip();
+}
+
+class Urun implements Item{
+int ID;
+String isim;
+
+void İsimGetir(int ID, int fiyat)
+
+}
+
+
+class Siparis extends Urun{
+
+
+}
+
+
+@enduml

@@ -1,0 +1,64 @@
+@startuml
+
+class Urun{
+
+int UrunID;
+String UrunAdi;
+String UrunKategori;
+float UrunFiyat;
+int StokAdet;
+
+}
+
+class Personel{
+String PersonelId;
+String PersonelAdi;
+String PersonelBirim;
+
+
+}
+
+
+class Fatura{
+int FaturaID;
+Urun urun;
+Personel personel;
+String Date;
+float faturaTutar;
+
+
+}
+
+
+
+
+interface Yazarkasa {
+
+void satısYap(Personel kasiyer, Urun urun);
+void UrunBilgisi(Urun urun);
+void zRaporu(Fatura fatura);
+void faturaOlustur(Personel personel, Fatura fatura)
+
+}
+
+
+class IBMkasa implements Yazarkasa{
+
+
+}
+
+
+abstract class SatınAlmaBirimi{
+
+
+void UrunBilgisi(Urun urun);
+abstract void UrunSatınAl(Personel SatınAlan, Urun AlınanUrun)
+void StokDurumu(Urun urun)
+public void IrsaliyeFatura(Urun urun)
+
+}
+
+
+
+
+@enduml

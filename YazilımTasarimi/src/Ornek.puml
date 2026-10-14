@@ -1,0 +1,36 @@
+@startuml
+
+
+ interface Kahve {
+    String icerik();
+    double fiyat();
+}
+
+
+class SadeKahve implements Kahve {
+  
+}
+
+interface KahveDecorator extends Kahve {
+}
+
+
+class SutDecorator implements KahveDecorator {
+    private Kahve kahve;
+
+   
+}
+
+class SekerDecorator implements KahveDecorator {
+    private Kahve kahve;
+
+  
+}
+
+
+ class DecoratorOrnek {
+   
+}
+
+
+@enduml

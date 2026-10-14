@@ -1,0 +1,19 @@
+@startuml
+
+class Arac {
+    void hareketEt() 
+}
+
+class Araba extends Arac {
+    void otomatikCam()
+}
+
+ class Otobüs extends Arac {
+  void ManuelCam()
+}
+
+class Bisiklet extends Arac {
+  void Cam()
+}
+
+@enduml

@@ -1,0 +1,35 @@
+@startuml
+
+abstract class Sekil{
+
+String renk;
+
+public void Tanım()
+
+abstract void alanHesapla()
+abstract void print()
+
+
+}
+
+class Kare extends Sekil{
+ int kenar;
+
+void alanHesapla();
+void print();
+
+}
+class Ucgen extends Sekil{
+int h;
+
+
+void alanHesapla();
+void print();
+}
+
+
+
+
+
+
+@enduml

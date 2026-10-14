@@ -1,0 +1,20 @@
+@startuml
+interface FahrenheitProvider {
+    double getTemperatureInFahrenheit();
+}
+
+
+class CelsiusTemperatureProvider {
+   
+}
+
+
+class TemperatureAdapter implements FahrenheitProvider {
+   
+}
+
+
+ class AdapterOrnek {
+    
+}
+@enduml

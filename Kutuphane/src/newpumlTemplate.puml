@@ -1,0 +1,64 @@
+@startuml
+
+
+interface KitapServis{
+
+void kitapDüzenle();
+void kitapEkle();
+
+}
+class Kitap implements KitapServis{
+void kitapDüzenle();
+void kitapEkle();
+}
+
+
+
+interface KutuphaneServis {
+    void KitapAl();
+    void kitapTeslimEt();
+    void kitapKontrol();
+  
+}
+
+
+class Kutuphane implements KutuphaneServis{
+
+    void KitapAl();
+    void kitapTeslimEt();
+    void kitapKontrol();
+}
+
+interface ogrenciServis{
+
+    void ogrenciEkle();
+    void ogrenciKontrol();
+
+}
+
+
+abstract class ogrenci extends Kutuphane implements ogrenciServis {
+int finalKitapAlimSuresi;
+int kitapSayisi;
+String bolumu;
+
+void ogrenciKontrol();
+
+
+}
+
+class lisansOgrenci extends ogrenci {
+int final KitapAlimSuresi = 1;
+int KitapSayisi;
+
+}
+class yukseklisansOgrenci extends ogrenci{
+int final KitapAlimSuresi = 2;
+int KitapSayisi =2 ;
+}
+class doktoraOgrenci extends ogrenci{
+int final KitapAlimSuresi = 3;
+int KitapSayisi = 3;
+}
+
+@enduml

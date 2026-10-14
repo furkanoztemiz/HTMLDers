@@ -1,0 +1,39 @@
+@startuml
+
+interface ATM{
+int ATMId
+void paraYatirma(int tutar, Musteri musteri)
+void paraTransferi(Musteri musteri, Musteri musteri, int tutar)
+void sifreDegis(Musteri musteri)
+
+}
+
+interface ATMExtra{
+
+void FastProcces(int tutar, FastID fastid){}
+
+}
+
+
+class ATMHizmetleri implements ATM {
+
+void paraYatirma(int tutar, Musteri musteri)
+void paraTransferi(Musteri musteri, Musteri musteri, int tutar)
+void sifreDegis(Musteri musteri)
+
+}
+
+
+class ATMHizmetleriSpecial implements ATM,ATMExtra {
+
+@override
+void paraYatirma(int tutar, Musteri musteri)
+void paraTransferi(Musteri musteri, Musteri musteri, int tutar)
+void sifreDegis(Musteri musteri)
+
+}
+
+abstract class Musteri extends ATMHizmetleri{}
+
+
+@enduml
